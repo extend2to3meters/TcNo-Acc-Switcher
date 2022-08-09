@@ -37,12 +37,8 @@ jobs:
       run: dotnet restore
 
     # Build Debug
-    - name: Build Debug
-      run: dotnet build TcNo-Acc-Switcher-Client\TcNo-Acc-Switcher-Client.csproj --configuration Debug
-        
-    # Build Debug
     - name: Build Release
-      run: dotnet build TcNo-Acc-Switcher-Client\TcNo-Acc-Switcher-Client.csproj --configuration Release
+      run: dotnet build TcNo-Acc-Switcher-Client\TcNo-Acc-Switcher-Client.csproj --configuration Release --arch x64
 
     # Debug
     - name: Upload Debug
